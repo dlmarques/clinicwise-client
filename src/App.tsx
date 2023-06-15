@@ -1,13 +1,11 @@
-import styles from "./App.module.scss";
-import Main from "./layout/main/Main";
-import Sidebar from "./layout/sidebar/Sidebar";
+import styles from './App.module.scss';
+import WebDefault from './layout/screens/web-default/WebDefault';
 
 function App() {
   return (
     <>
       <div className={styles.dashboard}>
-        <Sidebar />
-        <Main />
+        <WebDefault />
       </div>
     </>
   );

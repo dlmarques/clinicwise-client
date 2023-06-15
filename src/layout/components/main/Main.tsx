@@ -1,7 +1,7 @@
-import { Route, Routes } from "react-router-dom";
-import styles from "./main.module.scss";
-import Dashboard from "../../modules/dashboard/Dashboard";
-import Settings from "../../modules/settings/Settings";
+import { Route, Routes } from 'react-router-dom';
+import styles from './main.module.scss';
+import Dashboard from '../../../modules/dashboard/Dashboard';
+import Settings from '../../../modules/settings/Settings';
 
 const Main = () => {
   return (
