@@ -1,0 +1,31 @@
+.welcome-card {
+  width: calc(100% - 500px);
+  height: calc(100vh / 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 100px;
+  h1 {
+    font-size: 40px;
+    font-weight: 400;
+    span {
+      color: #009dda;
+      font-weight: 700;
+    }
+  }
+  .next-event {
+    padding-left: 15px;
+  }
+  .event-card {
+    display: flex;
+    padding-top: 5px;
+    svg {
+      font-size: 50px;
+      margin-left: 5px;
+      color: #009dda;
+    }
+    p {
+      font-weight: 300;
+    }
+  }
+}
