@@ -1,0 +1,17 @@
+.dashboard-suggestions {
+  width: calc(100% - 500px);
+  height: calc(100vh / 3);
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-size: 25px;
+    margin: auto;
+  }
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+  }
+}
