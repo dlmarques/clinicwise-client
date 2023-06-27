@@ -1,4 +1,5 @@
 export interface DoctorData {
+  id: string;
   name: string;
   age: number;
   birth: string;

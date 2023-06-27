@@ -8,7 +8,6 @@ const WelcomeCard = () => {
         <span>Olá</span>, Daniel Lucas Marques!
       </h1>
       <p className={styles['next-event']}>Próximo agendamento:</p>
-
       <div className={styles['event-card']}>
         <div>
           <TbDental />

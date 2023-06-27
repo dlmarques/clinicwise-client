@@ -8,6 +8,7 @@ const DashboardSuggestions = () => {
   useEffect(() => {
     const arr = [
       {
+        id: '',
         name: 'Manuel Marques',
         image:
           'https://www.freepnglogos.com/uploads/doctor-png/basic-ideas-for-logical-programs-for-doctor-home-loan-6.png',
@@ -17,6 +18,7 @@ const DashboardSuggestions = () => {
         birth: '10/02/1970',
       },
       {
+        id: '',
         name: 'José Santos',
         image:
           'https://purepng.com/public/uploads/thumbnail/purepng.com-doctorsdoctorsdoctors-and-nursesa-qualified-practitioner-of-medicine-aclinicianmedical-practitionermale-doctor-14215268567157bmxj.png',
@@ -26,6 +28,7 @@ const DashboardSuggestions = () => {
         birth: '10/02/1970',
       },
       {
+        id: '',
         name: 'Manuel Marques',
         image:
           'https://www.freepnglogos.com/uploads/doctor-png/basic-ideas-for-logical-programs-for-doctor-home-loan-6.png',
@@ -35,6 +38,7 @@ const DashboardSuggestions = () => {
         birth: '10/02/1970',
       },
       {
+        id: '',
         name: 'José Santos',
         image:
           'https://purepng.com/public/uploads/large/purepng.com-doctordoctorsdoctors-and-nursesclinicianmedical-practitionernotepadfemale-14215268571744ntgi.png',
