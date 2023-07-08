@@ -1,7 +1,7 @@
 import styles from './sidebar.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@chakra-ui/react';
-import logo from '../../../assets/logo.png';
+import { ReactComponent as Logo } from '../../../assets/logo/Main.svg';
 import { FaPlus } from 'react-icons/fa';
 import { FiLogOut } from 'react-icons/fi';
 
@@ -10,14 +10,10 @@ const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.logo}>
-        <img src={logo} alt="logo" />
+        <Logo />
       </div>
       <div className={styles.menu}>
-        <Button
-          backgroundColor={'#009DDA'}
-          color={'#fff'}
-          leftIcon={<FaPlus />}
-        >
+        <Button leftIcon={<FaPlus />} className={styles.button}>
           Marcar
         </Button>
         <ul>
@@ -34,9 +30,6 @@ const Sidebar = () => {
             <span onClick={() => navigate('settings')}>Meu Perfil</span>
           </li>
         </ul>
-      </div>
-      <div className={styles.bottom}>
-        <FiLogOut />
       </div>
     </div>
   );
