@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 import styles from './dashboard-history.module.scss';
 import { Event } from '../../../../models/Event';
 import ListItem from '../../../../shared/components/list-item/ListItem';
+import { useTranslation } from 'react-i18next';
 
 const DashboardHistory = () => {
+  const { t } = useTranslation();
   const [history, setHistory] = useState<Event[]>([]);
   useEffect(() => {
     const arr = [
@@ -11,37 +13,37 @@ const DashboardHistory = () => {
         id: '',
         date: '10-05-2023',
         type: 'medical_exam',
-        speciality: 'Cardiologia',
+        speciality: 'cardiology',
       },
       {
         id: '',
         date: '10-05-2023',
         type: 'medical_cons',
-        speciality: 'Dentista',
+        speciality: 'dentist',
       },
       {
         id: '',
         date: '10-05-2023',
         type: 'emergency',
-        speciality: 'Neurologia',
+        speciality: 'neruology',
       },
       {
         id: '',
         date: '10-05-2023',
         type: 'medical_exam',
-        speciality: 'Dentista',
+        speciality: 'dentist',
       },
       {
         id: '',
         date: '10-05-2023',
         type: 'emergency',
-        speciality: 'Neurologia',
+        speciality: 'neurology',
       },
       {
         id: '',
         date: '10-05-2023',
         type: 'medical_exam',
-        speciality: 'Dentista',
+        speciality: 'dentist',
       },
     ];
     setHistory(arr);
@@ -56,7 +58,7 @@ const DashboardHistory = () => {
             <ListItem
               key={id}
               name={item.type}
-              description={item.speciality}
+              description={t(item.type) + ' - ' + t(item.speciality)}
               date={item.date}
             />
           );

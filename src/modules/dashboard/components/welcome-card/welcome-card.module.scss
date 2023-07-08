@@ -10,13 +10,14 @@
     font-size: 40px;
     font-weight: 400;
     span {
-      color: #009dda;
+      color: var(--darkBlue);
       font-weight: 700;
     }
   }
   .next-event {
     padding-left: 15px;
     margin-top: 10px;
+    color: var(--darkBlue);
   }
   .event-card {
     display: flex;
@@ -24,7 +25,7 @@
     svg {
       font-size: 50px;
       margin-left: 5px;
-      color: #009dda;
+      color: var(--darkBlue);
     }
     p {
       font-weight: 300;

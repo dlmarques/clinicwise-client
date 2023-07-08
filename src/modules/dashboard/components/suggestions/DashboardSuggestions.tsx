@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 import { DoctorData } from '../../../../models/DoctorData';
 import styles from './dashboard-suggestions.module.scss';
 import ProfileCard from '../../../../shared/components/profile-card/ProfileCard';
+import { useTranslation } from 'react-i18next';
 
 const DashboardSuggestions = () => {
+  const { t } = useTranslation();
   const [list, setList] = useState<DoctorData[]>([]);
   useEffect(() => {
     const arr = [
@@ -12,7 +14,7 @@ const DashboardSuggestions = () => {
         name: 'Manuel Marques',
         image:
           'https://www.freepnglogos.com/uploads/doctor-png/basic-ideas-for-logical-programs-for-doctor-home-loan-6.png',
-        speciality: 'Nutrition',
+        speciality: 'nutrition',
         age: 47,
         email: 'test@email.com',
         birth: '10/02/1970',
@@ -22,7 +24,7 @@ const DashboardSuggestions = () => {
         name: 'José Santos',
         image:
           'https://purepng.com/public/uploads/thumbnail/purepng.com-doctorsdoctorsdoctors-and-nursesa-qualified-practitioner-of-medicine-aclinicianmedical-practitionermale-doctor-14215268567157bmxj.png',
-        speciality: 'Dentist',
+        speciality: 'dentist',
         age: 47,
         email: 'test@email.com',
         birth: '10/02/1970',
@@ -32,7 +34,7 @@ const DashboardSuggestions = () => {
         name: 'Manuel Marques',
         image:
           'https://www.freepnglogos.com/uploads/doctor-png/basic-ideas-for-logical-programs-for-doctor-home-loan-6.png',
-        speciality: 'Nutrition',
+        speciality: 'nutrition',
         age: 47,
         email: 'test@email.com',
         birth: '10/02/1970',
@@ -42,7 +44,7 @@ const DashboardSuggestions = () => {
         name: 'José Santos',
         image:
           'https://purepng.com/public/uploads/large/purepng.com-doctordoctorsdoctors-and-nursesclinicianmedical-practitionernotepadfemale-14215268571744ntgi.png',
-        speciality: 'Dentist',
+        speciality: 'dentist',
         age: 47,
         email: 'test@email.com',
         birth: '10/02/1970',
@@ -61,7 +63,7 @@ const DashboardSuggestions = () => {
               key={id}
               image={doctor.image}
               name={doctor.name}
-              speciality={doctor.speciality}
+              speciality={t(doctor.speciality)}
             />
           );
         })}
