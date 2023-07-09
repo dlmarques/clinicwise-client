@@ -55,7 +55,7 @@ const DashboardSuggestions = () => {
 
   return (
     <div className={styles['dashboard-suggestions']}>
-      <h3>Médicos Sugeridos</h3>
+      <h3>{t('suggested_doctors')}</h3>
       <div className={styles.list}>
         {list.map((doctor, id) => {
           return (

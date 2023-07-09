@@ -4,11 +4,17 @@
   "dentist": "Dentista",
   "documents": "Documentos",
   "emergency": "Urgência",
+  "history": "Histórico",
+  "hi": "Olá",
+  "household": "Agregado familiar",
   "medical_exam": "Exame médico",
   "medical_cons": "Consulta médica",
   "my_profile": "Meu perfil",
   "neurology": "Neurologia",
+  "next_appointment": "Próximo agendamento",
   "nutrition": "Nutrição",
+  "policy_number": "Nº apólice",
   "quick_search": "Pesquisa rápida",
-  "schedule": "Marcar"
+  "schedule": "Marcar",
+  "suggested_doctors": "Médicos sugeridos"
 }

@@ -4,11 +4,17 @@
   "dentist": "Dentist",
   "documents": "Documents",
   "emergency": "Emergency",
+  "history": "History",
+  "hi": "Hi",
+  "household": "Household",
   "medical_exam": "Medical exam",
   "medical_cons": "Medical consultation",
   "my_profile": "My profile",
   "neurology": "Neurology",
+  "next_appointment": "Next appointment",
   "nutrition": "Nutrition",
+  "policy_number": "Policy no",
   "quick_search": "Quick search",
-  "schedule": "Schedule"
+  "schedule": "Schedule",
+  "suggested_doctors": "Suggested doctors"
 }

@@ -51,7 +51,7 @@ const DashboardHistory = () => {
 
   return (
     <div className={styles['dashboard-history']}>
-      <h3>Histórico</h3>
+      <h3>{t('history')}</h3>
       <div className={styles.list}>
         {history.map((item, id) => {
           return (
