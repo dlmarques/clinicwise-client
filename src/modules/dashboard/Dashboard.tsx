@@ -1,5 +1,5 @@
 import DashboardHistory from './components/dashboard-history/DashboardHistory';
-import NextAppointments from './components/next-appointments/NextAppointments';
+import Messages from './components/messages/Messages';
 import PersonalCard from './components/personal-card/PersonalCard';
 import DashboardSuggestions from './components/suggestions/DashboardSuggestions';
 import WelcomeCard from './components/welcome-card/WelcomeCard';
@@ -15,7 +15,7 @@ const Dashboard = () => {
       </div>
       <div className={styles.right}>
         <PersonalCard />
-        <NextAppointments />
+        <Messages />
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ const DashboardHistory = () => {
         id: '',
         date: '10-05-2023',
         type: 'emergency',
-        speciality: 'neruology',
+        speciality: 'neurology',
       },
       {
         id: '',
@@ -53,16 +53,17 @@ const DashboardHistory = () => {
     <div className={styles['dashboard-history']}>
       <h3>{t('history')}</h3>
       <div className={styles.list}>
-        {history.map((item, id) => {
-          return (
-            <ListItem
-              key={id}
-              name={item.type}
-              description={t(item.type) + ' - ' + t(item.speciality)}
-              date={item.date}
-            />
-          );
-        })}
+        {history &&
+          history.map((item, id) => {
+            return (
+              <ListItem
+                key={id}
+                name={item.type}
+                description={t(item.type) + ' - ' + t(item.speciality)}
+                date={item.date}
+              />
+            );
+          })}
       </div>
     </div>
   );
