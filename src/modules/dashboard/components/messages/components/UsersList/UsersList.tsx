@@ -11,10 +11,6 @@ const UsersList = () => {
       <ChatUser source="https://bit.ly/ryan-florence" name="Kent Dodds" />
       <ChatUser source="https://bit.ly/kent-c-dodds" name="Kent Dodds" />
       <ChatUser source="https://bit.ly/prosper-baba" name="Kent Dodds" />
-      <ChatUser source="https://bit.ly/ryan-florence" name="Kent Dodds" />
-      <ChatUser source="https://bit.ly/code-beast" name="Kent Dodds" />
-      <ChatUser source="https://bit.ly/kent-c-dodds" name="Kent Dodds" />
-      <ChatUser source="https://bit.ly/prosper-baba" name="Kent Dodds" />
     </div>
   );
 };

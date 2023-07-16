@@ -27,7 +27,7 @@ const ChatBox = () => {
       </div>
       <div className={styles.messages}>
         {messages &&
-          messages.map((message, id) => {
+          messages.map(message => {
             return (
               <ChatContainer
                 text={message.text}
