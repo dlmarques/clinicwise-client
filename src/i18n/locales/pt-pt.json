@@ -1,5 +1,5 @@
 {
-  "appointment_book": "Minha agenda",
+  "appointment_book": "A Minha Agenda",
   "cardiology": "Cardiologia",
   "dentist": "Dentista",
   "documents": "Documentos",
@@ -10,7 +10,7 @@
   "medical_exam": "Exame médico",
   "medical_cons": "Consulta médica",
   "messages": "Mensagens",
-  "my_profile": "Meu perfil",
+  "my_profile": "O Meu Perfil",
   "neurology": "Neurologia",
   "next_appointment": "Próximo agendamento",
   "next_appointments": "Próximos agendamentos",
@@ -18,5 +18,6 @@
   "policy_number": "Nº apólice",
   "quick_search": "Pesquisa rápida",
   "schedule": "Marcar",
+  "search": "Pesquisa",
   "suggested_doctors": "Médicos sugeridos"
 }

@@ -20,9 +20,7 @@ const Sidebar = () => {
         </Button>
         <ul>
           <li>
-            <span onClick={() => navigate('settings')}>
-              {t('quick_search')}
-            </span>
+            <span onClick={() => navigate('settings')}>{t('search')}</span>
           </li>
           <li>
             <span onClick={() => navigate('settings')}>
