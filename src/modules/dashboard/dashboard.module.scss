@@ -11,5 +11,8 @@
     display: flex;
     flex-direction: column;
     width: 40%;
+    -webkit-box-shadow: -1px 0px 5px 0px var(--lightGrey);
+    -moz-box-shadow: -1px 0px 5px 0px var(--lightGrey);
+    box-shadow: -1px 0px 5px 0px var(--lightGrey);
   }
 }
