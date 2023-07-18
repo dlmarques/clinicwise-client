@@ -1,0 +1,36 @@
+.carousel {
+  position: relative;
+  padding-top: 10px;
+  .right-arrow {
+    position: absolute;
+    right: 1px;
+    z-index: 99;
+    width: 150px;
+    height: 90px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.499124649859944) 50%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+  .left-arrow {
+    position: absolute;
+    left: -49px;
+    z-index: 99;
+    width: 150px;
+    height: 90px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.499124649859944) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    visibility: hidden;
+  }
+  .hidden {
+    display: none;
+  }
+}

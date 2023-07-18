@@ -63,30 +63,7 @@ const WelcomeCard = () => {
         <span>{t('hi')}</span>, Daniel Lucas Marques.
       </h1>
       <p className={styles['next-event']}>{t('next_appointments')}</p>
-      {nextEvents && nextEvents.length > 3 ? (
-        <EventsCarousel events={nextEvents} />
-      ) : (
-        <div className={styles.list}>
-          <AppointmentCard
-            icon={<FaTooth />}
-            speciality="dentist"
-            date="22 de julho"
-            doctor="Manuel Costa"
-          />
-          <AppointmentCard
-            icon={<FaTooth />}
-            speciality="cardiology"
-            date="22 de julho"
-            doctor="Manuel Costa"
-          />
-          <AppointmentCard
-            icon={<FaTooth />}
-            speciality="neurology"
-            date="22 de julho"
-            doctor="Manuel Costa"
-          />
-        </div>
-      )}
+      {nextEvents && <EventsCarousel events={nextEvents} />}
     </div>
   );
 };
