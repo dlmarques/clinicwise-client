@@ -7,27 +7,25 @@
   padding-left: 50px;
 
   h1 {
-    font-weight: 400;
+    font-weight: 700;
+    font-family: var(--dmSans);
+    color: var(--darkBlue);
     span {
-      color: var(--darkBlue);
-      font-weight: 700;
+      color: var(--lightBlue);
+      font-family: var(--dmSans);
     }
   }
   .next-event {
-    padding-left: 15px;
-    margin-top: 10px;
+    padding-left: 5px;
+    margin-top: 5px;
+    font-family: var(--montSerrat);
+    font-weight: 700;
     color: var(--darkBlue);
   }
-  .event-card {
+
+  .list {
     display: flex;
-    padding-top: 5px;
-    svg {
-      font-size: 50px;
-      margin-left: 5px;
-      color: var(--darkBlue);
-    }
-    p {
-      font-weight: 300;
-    }
+    align-items: center;
+    gap: 25px;
   }
 }

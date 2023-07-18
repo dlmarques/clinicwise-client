@@ -14,36 +14,42 @@ const DashboardHistory = () => {
         date: '10-05-2023',
         type: 'medical_exam',
         speciality: 'cardiology',
+        doctor: '',
       },
       {
         id: '',
         date: '10-05-2023',
         type: 'medical_cons',
         speciality: 'dentist',
+        doctor: '',
       },
       {
         id: '',
         date: '10-05-2023',
         type: 'emergency',
         speciality: 'neurology',
+        doctor: '',
       },
       {
         id: '',
         date: '10-05-2023',
         type: 'medical_exam',
         speciality: 'dentist',
+        doctor: '',
       },
       {
         id: '',
         date: '10-05-2023',
         type: 'emergency',
         speciality: 'neurology',
+        doctor: '',
       },
       {
         id: '',
         date: '10-05-2023',
         type: 'medical_exam',
         speciality: 'dentist',
+        doctor: '',
       },
     ];
     setHistory(arr);

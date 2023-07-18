@@ -3,4 +3,5 @@ export interface Event {
   date: string;
   type: string;
   speciality: string;
+  doctor: string;
 }
