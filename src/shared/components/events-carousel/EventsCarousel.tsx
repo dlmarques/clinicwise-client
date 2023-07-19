@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Slider from 'react-slick';
 import { Event } from '../../../models/Event';
 import { getIcon } from '../../../utils/functions/getIcon';
@@ -7,40 +6,51 @@ import styles from './events-carousel.module.scss';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
 const EventsCarousel = (props: { events: Event[] }) => {
+  const leftBackground = document.getElementById(
+    'leftBackground'
+  ) as HTMLElement;
+  const prevIcon = document.getElementsByClassName(
+    'slick-prev'
+  )[0] as HTMLElement;
+  const nextIcon = document.getElementsByClassName(
+    'slick-next'
+  )[0] as HTMLElement;
+  const rightBackground = document.getElementById(
+    'rightBackground'
+  ) as HTMLElement;
+  const pages = Math.ceil(props.events.length / 3);
+
+  const initialStyle = () => {
+    if (prevIcon && leftBackground && prevIcon.style && leftBackground.style) {
+      prevIcon['style'].display = 'none';
+      leftBackground['style'].visibility = 'hidden';
+    }
+  };
+  initialStyle();
+
   const disablePrevOnInit = (index: number, show?: boolean) => {
-    const pages = Math.ceil(props.events.length / 3);
-    //right
+    // Right arrow
     if (index - 1 === pages) {
-      const nextIcon: any = document.getElementsByClassName('slick-next');
-      const rightBackground: any = document.getElementById('rightBackground');
       if (nextIcon) {
-        nextIcon[0].style.display = 'none';
+        nextIcon.style.display = 'none';
         rightBackground.style.visibility = 'hidden';
       }
     } else {
-      const nextIcon: any = document.getElementsByClassName('slick-next');
-      const rightBackground: any = document.getElementById('rightBackground');
-
       if (nextIcon) {
-        nextIcon[0].style.display = 'block';
+        nextIcon.style.display = 'block';
         rightBackground.style.visibility = 'visible';
       }
     }
-    //left
-    const leftBackground: any = document.getElementById('leftBackground');
-    const prevIcon: any = document.getElementsByClassName('slick-prev');
+
+    //Left arrow
     if (prevIcon && !show) {
-      prevIcon[0].style.display = 'none';
-      leftBackground.style.visibility = 'hidden';
+      prevIcon['style'].display = 'none';
+      leftBackground['style'].visibility = 'hidden';
     } else if (prevIcon && show) {
-      prevIcon[0].style.display = 'block';
-      leftBackground.style.visibility = 'visible';
+      prevIcon['style'].display = 'block';
+      leftBackground['style'].visibility = 'visible';
     }
   };
-
-  useEffect(() => {
-    disablePrevOnInit(0);
-  }, []);
 
   const settings = {
     dots: false,
@@ -52,10 +62,12 @@ const EventsCarousel = (props: { events: Event[] }) => {
     prevArrow: <IoIosArrowBack />,
     nextArrow: <IoIosArrowForward />,
   };
+
   return (
     <div className={styles.carousel}>
       <div id="leftBackground" className={styles['left-arrow']}></div>
       <div id="rightBackground" className={styles['right-arrow']}></div>
+
       <Slider
         {...settings}
         beforeChange={(lastIndex, index) =>
