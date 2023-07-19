@@ -1,5 +1,6 @@
 import { getIcon } from '../../../utils/functions/getIcon';
 import styles from './list-item.module.scss';
+import { HiDotsHorizontal } from 'react-icons/hi';
 
 interface ListItem {
   name: string;
@@ -14,7 +15,10 @@ const ListItem = ({ name, description, date }: ListItem) => {
         {getIcon(name)}
         <p>{description}</p>
       </div>
-      <p>{date}</p>
+      <div className={styles.options}>
+        <p>{date}</p>
+        <HiDotsHorizontal />
+      </div>
     </div>
   );
 };

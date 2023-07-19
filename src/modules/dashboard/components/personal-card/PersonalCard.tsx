@@ -8,13 +8,14 @@ const PersonalCard = () => {
     <div className={styles['personal-card']}>
       <div className={styles.avatar}>
         <AvatarCard
-          name="Daniel Marques"
+          name="Daniel Lucas Marques"
           photo="https://bit.ly/dan-abramov"
-          showName={true}
+          showName={false}
           avatarSize="xl"
         />
       </div>
       <div className={styles.info}>
+        <h3>Daniel Lucas Marques</h3>
         <p>{t('policy_number')} 123823212</p>
         <p>{t('household')}: 4</p>
       </div>

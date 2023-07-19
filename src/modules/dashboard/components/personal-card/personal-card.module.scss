@@ -1,22 +1,31 @@
 .personal-card {
   width: 100%;
-  height: calc(100vh / 3);
+  height: 30%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  background-color: var(--lightGrey);
+
   span {
     font-size: 20px;
     font-weight: 700;
   }
 
   .info {
-    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    padding-left: 20px;
+    h3 {
+      color: var(--darkBlue);
+      font-family: var(--dmSans);
+      font-weight: 600;
+    }
     p {
       font-weight: 300;
+      color: var(--darkBlue);
+      font-family: var(--montSerrat);
+      font-weight: 500;
     }
   }
 }

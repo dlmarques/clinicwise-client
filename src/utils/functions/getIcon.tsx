@@ -1,8 +1,9 @@
-import { BsFileEarmarkMedical, BsHeartPulseFill } from 'react-icons/bs';
+import { BsHeartPulseFill } from 'react-icons/bs';
 import { AiOutlineMedicineBox } from 'react-icons/ai';
-import { MdOutlineEmergency } from 'react-icons/md';
+import { MdEmergency } from 'react-icons/md';
 import { useTranslation } from 'react-i18next';
-import { FaBrain, FaTooth } from 'react-icons/fa';
+import { FaBrain, FaTooth, FaStethoscope } from 'react-icons/fa';
+import { IoDocumentText } from 'react-icons/io5';
 
 export const getIcon = (name: string) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -10,7 +11,7 @@ export const getIcon = (name: string) => {
   switch (name) {
     case 'medical_exam':
       return (
-        <BsFileEarmarkMedical
+        <IoDocumentText
           data-tooltip-id="my-tooltip"
           data-tooltip-content={t('medical_exam')}
         />
@@ -18,7 +19,7 @@ export const getIcon = (name: string) => {
       break;
     case 'medical_cons':
       return (
-        <AiOutlineMedicineBox
+        <FaStethoscope
           data-tooltip-id="my-tooltip"
           data-tooltip-content={t('medical_cons')}
         />
@@ -26,7 +27,7 @@ export const getIcon = (name: string) => {
       break;
     case 'emergency':
       return (
-        <MdOutlineEmergency
+        <MdEmergency
           data-tooltip-id="my-tooltip"
           data-tooltip-content={t('emergency')}
         />

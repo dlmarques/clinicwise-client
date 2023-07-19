@@ -1,0 +1,23 @@
+.chat-user {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid var(--lightGrey);
+  cursor: pointer;
+
+  .details {
+    max-width: 85%;
+    h4 {
+      font-family: var(--montSerrat);
+      font-weight: 500;
+    }
+    p {
+      font-family: var(--montSerrat);
+      font-weight: 400;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

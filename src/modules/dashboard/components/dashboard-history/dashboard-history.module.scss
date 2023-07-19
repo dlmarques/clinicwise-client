@@ -4,12 +4,37 @@
   display: flex;
   flex-direction: column;
   user-select: none;
-  h3 {
-    padding-left: 50px;
-    color: var(--darkBlue);
+  .header {
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h3 {
+      color: var(--darkBlue);
+      font-family: var(--dmSans);
+      font-weight: 800;
+    }
+    .filter {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding-right: 5px;
+      p {
+        color: var(--darkBlue);
+        font-family: var(--montSerrat);
+        font-size: 14px;
+        font-weight: 500;
+      }
+      svg {
+        color: var(--darkBlue);
+        cursor: pointer;
+      }
+    }
   }
+
   .list {
     max-height: calc(100vh / 3);
     overflow-y: auto;
+    padding: 0 50px;
   }
 }

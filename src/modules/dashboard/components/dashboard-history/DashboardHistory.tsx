@@ -3,6 +3,7 @@ import styles from './dashboard-history.module.scss';
 import { Event } from '../../../../models/Event';
 import ListItem from '../../../../shared/components/list-item/ListItem';
 import { useTranslation } from 'react-i18next';
+import { IoIosArrowDown } from 'react-icons/io';
 
 const DashboardHistory = () => {
   const { t } = useTranslation();
@@ -57,7 +58,13 @@ const DashboardHistory = () => {
 
   return (
     <div className={styles['dashboard-history']}>
-      <h3>{t('history')}</h3>
+      <div className={styles.header}>
+        <h3>{t('history')}</h3>
+        <span className={styles.filter}>
+          <p>{t('filter')}</p>
+          <IoIosArrowDown />
+        </span>
+      </div>
       <div className={styles.list}>
         {history &&
           history.map((item, id) => {

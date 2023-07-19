@@ -1,7 +1,7 @@
 import ChatUser from '../User/User';
 import styles from './users-list.module.scss';
 
-const UsersList = () => {
+const UsersList = (setSelectedUser: any) => {
   return (
     <div className={styles['users-list']}>
       <ChatUser source="https://bit.ly/kent-c-dodds" name="Kent Dodds" />
