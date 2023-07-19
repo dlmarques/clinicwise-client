@@ -3,6 +3,11 @@ import { DoctorData } from '../../../../models/DoctorData';
 import styles from './dashboard-suggestions.module.scss';
 import ProfileCard from '../../../../shared/components/profile-card/ProfileCard';
 import { useTranslation } from 'react-i18next';
+import doc2 from '../../../../assets/mock_photos/doc2.jpg';
+import doc3 from '../../../../assets/mock_photos/doc3.jpg';
+import doc4 from '../../../../assets/mock_photos/doc4.jpg';
+import Slider from 'react-slick';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 const DashboardSuggestions = () => {
   const { t } = useTranslation();
@@ -12,8 +17,7 @@ const DashboardSuggestions = () => {
       {
         id: '',
         name: 'Manuel Marques',
-        image:
-          'https://www.freepnglogos.com/uploads/doctor-png/basic-ideas-for-logical-programs-for-doctor-home-loan-6.png',
+        image: doc4,
         speciality: 'nutrition',
         age: 47,
         email: 'test@email.com',
@@ -22,8 +26,7 @@ const DashboardSuggestions = () => {
       {
         id: '',
         name: 'José Santos',
-        image:
-          'https://purepng.com/public/uploads/thumbnail/purepng.com-doctorsdoctorsdoctors-and-nursesa-qualified-practitioner-of-medicine-aclinicianmedical-practitionermale-doctor-14215268567157bmxj.png',
+        image: doc3,
         speciality: 'dentist',
         age: 47,
         email: 'test@email.com',
@@ -32,19 +35,8 @@ const DashboardSuggestions = () => {
       {
         id: '',
         name: 'Manuel Marques',
-        image:
-          'https://www.freepnglogos.com/uploads/doctor-png/basic-ideas-for-logical-programs-for-doctor-home-loan-6.png',
+        image: doc3,
         speciality: 'nutrition',
-        age: 47,
-        email: 'test@email.com',
-        birth: '10/02/1970',
-      },
-      {
-        id: '',
-        name: 'José Santos',
-        image:
-          'https://purepng.com/public/uploads/large/purepng.com-doctordoctorsdoctors-and-nursesclinicianmedical-practitionernotepadfemale-14215268571744ntgi.png',
-        speciality: 'dentist',
         age: 47,
         email: 'test@email.com',
         birth: '10/02/1970',

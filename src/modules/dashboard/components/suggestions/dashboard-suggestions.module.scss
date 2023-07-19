@@ -7,10 +7,14 @@
   h3 {
     padding-left: 50px;
     color: var(--darkBlue);
+    font-family: var(--dmSans);
+    font-weight: 800;
   }
   .list {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    padding-left: 50px;
+    gap: 45px;
+    padding-top: 15px;
   }
 }
