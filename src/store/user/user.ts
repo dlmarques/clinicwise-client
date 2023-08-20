@@ -1,9 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '..';
-
-interface UserState {
-  lang: string;
-}
+import { UserState } from '../../models/State';
 
 const initialState: UserState = {
   lang: 'pt',
@@ -19,6 +16,6 @@ export const userSlice = createSlice({
   },
 });
 
-export const { changeLang } = userSlice.actions;
+export const userActions = userSlice.actions;
 
 export const selectUser = (state: RootState) => state.user;

@@ -3,11 +3,8 @@ import { DoctorData } from '../../../../models/DoctorData';
 import styles from './dashboard-suggestions.module.scss';
 import ProfileCard from '../../../../shared/components/profile-card/ProfileCard';
 import { useTranslation } from 'react-i18next';
-import doc2 from '../../../../assets/mock_photos/doc2.jpg';
 import doc3 from '../../../../assets/mock_photos/doc3.jpg';
 import doc4 from '../../../../assets/mock_photos/doc4.jpg';
-import Slider from 'react-slick';
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 const DashboardSuggestions = () => {
   const { t } = useTranslation();

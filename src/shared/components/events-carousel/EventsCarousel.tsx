@@ -74,9 +74,10 @@ const EventsCarousel = (props: { events: Event[] }) => {
           disablePrevOnInit(index, index !== 0)
         }
       >
-        {props.events.map(event => {
+        {props.events.map((event, index) => {
           return (
             <AppointmentCard
+              isNext={index === 0}
               key={event.id}
               icon={getIcon(event.speciality)}
               date={event.date}

@@ -6,6 +6,7 @@ interface AppointmentCardProps {
   speciality: string;
   date: string;
   doctor: string;
+  isNext: boolean;
 }
 
 const AppointmentCard = ({
@@ -13,10 +14,15 @@ const AppointmentCard = ({
   speciality,
   date,
   doctor,
+  isNext,
 }: AppointmentCardProps) => {
   const { t } = useTranslation();
   return (
-    <div className={styles['appointment-card']}>
+    <div
+      className={
+        isNext ? styles['next-appointment-card'] : styles['appointment-card']
+      }
+    >
       <div className={styles.icon}>{icon}</div>
       <div className={styles.details}>
         <p>{t(speciality)}</p>

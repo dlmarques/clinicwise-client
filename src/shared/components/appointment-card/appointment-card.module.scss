@@ -1,4 +1,4 @@
-.appointment-card {
+.next-appointment-card {
   width: 220px;
   height: 90px;
   background-color: var(--lightBlue);
@@ -18,6 +18,31 @@
     p {
       font-family: var(--montSerrat);
       color: var(--solidWhite);
+      font-weight: 500;
+    }
+  }
+}
+
+.appointment-card {
+  width: 220px;
+  height: 90px;
+  background-color: var(--solidWhite);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid var(--lightGrey);
+  .icon {
+    svg {
+      font-size: 50px;
+      color: var(--darkBlue);
+    }
+  }
+
+  .details {
+    p {
+      font-family: var(--montSerrat);
+      color: var(--darkBlue);
       font-weight: 500;
     }
   }
