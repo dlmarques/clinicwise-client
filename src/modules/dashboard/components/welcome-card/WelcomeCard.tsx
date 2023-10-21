@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './welcome-card.module.scss';
-import { FaTooth } from 'react-icons/fa';
-import AppointmentCard from '../../../../shared/components/appointment-card/AppointmentCard';
 import { Event } from '../../../../models/Event';
 import EventsCarousel from '../../../../shared/components/events-carousel/EventsCarousel';
 

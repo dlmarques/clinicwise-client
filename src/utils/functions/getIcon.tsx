@@ -1,5 +1,4 @@
 import { BsHeartPulseFill } from 'react-icons/bs';
-import { AiOutlineMedicineBox } from 'react-icons/ai';
 import { MdEmergency } from 'react-icons/md';
 import { useTranslation } from 'react-i18next';
 import { FaBrain, FaTooth, FaStethoscope } from 'react-icons/fa';
