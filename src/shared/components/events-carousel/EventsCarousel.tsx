@@ -70,7 +70,7 @@ const EventsCarousel = (props: { events: Event[] }) => {
 
       <Slider
         {...settings}
-        beforeChange={(lastIndex, index) =>
+        beforeChange={(_lastIndex, index) =>
           disablePrevOnInit(index, index !== 0)
         }
       >
