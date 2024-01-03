@@ -25,14 +25,11 @@
     padding-top: 50px;
 
     .button {
-      background-color: var(--darkBlue);
-      color: var(--solidWhite);
+      background-color: var(--button-background);
+      color: var(--button-text-color);
       font-family: var(--montSerrat);
       font-weight: 600;
       font-size: 16px;
-      &:hover {
-        background-color: var(--darkBlue);
-      }
     }
     ul {
       width: 100%;
@@ -44,11 +41,23 @@
       li {
         span {
           font-size: 16px;
-          color: var(--darkBlue);
+          color: var(--text-color);
           font-family: var(--montSerrat);
           font-weight: 600;
         }
       }
+    }
+  }
+  .theme {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .button {
+      background-color: var(--button-background);
+      color: var(--button-text-color);
     }
   }
 }

@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--lightGrey);
+  background-color: var(--personal-card-background);
 
   span {
     font-size: 20px;
@@ -17,13 +17,13 @@
     flex-direction: column;
     padding-left: 20px;
     h3 {
-      color: var(--darkBlue);
+      color: var(--personal-card-text);
       font-family: var(--dmSans);
       font-weight: 600;
     }
     p {
       font-weight: 300;
-      color: var(--darkBlue);
+      color: var(--personal-card-text);
       font-family: var(--montSerrat);
       font-weight: 500;
     }

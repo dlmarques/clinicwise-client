@@ -9,9 +9,9 @@
   h1 {
     font-weight: 700;
     font-family: var(--dmSans);
-    color: var(--darkBlue);
+    color: var(--text-color);
     span {
-      color: var(--lightBlue);
+      color: var(--highlight-text-color);
       font-family: var(--dmSans);
     }
   }
@@ -20,7 +20,7 @@
     margin-top: 5px;
     font-family: var(--montSerrat);
     font-weight: 700;
-    color: var(--darkBlue);
+    color: var(--text-color);
   }
 
   .list {

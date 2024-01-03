@@ -1,18 +1,25 @@
 import styles from './sidebar.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@chakra-ui/react';
-import { ReactComponent as Logo } from '../../../assets/logo/Main.svg';
-import { FaPlus } from 'react-icons/fa';
+import { ReactComponent as LightLogo } from '../../../assets/logo/Main.svg';
+import { ReactComponent as DarkLogo } from '../../../assets/logo/Inverted.svg';
+import { FaMoon, FaPlus, FaSun } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserTheme } from '../../../store/selectors';
+import { userActions } from '../../../store/user/user';
 
 const Sidebar = () => {
   const { t } = useTranslation();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const theme = useSelector(getUserTheme);
+  console.log(theme);
 
   return (
     <div className={styles.sidebar}>
       <div className={styles.logo}>
-        <Logo />
+        {theme === 'dark' ? <DarkLogo /> : <LightLogo />}
       </div>
       <div className={styles.menu}>
         <Button leftIcon={<FaPlus />} className={styles.button}>
@@ -34,6 +41,16 @@ const Sidebar = () => {
             <span onClick={() => navigate('settings')}>{t('my_profile')}</span>
           </li>
         </ul>
+      </div>
+      <div className={styles.theme}>
+        <Button
+          className={styles.button}
+          onClick={() => dispatch(userActions.changeTheme())}
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content={theme === 'dark' ? t('light') : t('dark')}
+        >
+          {theme === 'dark' ? <FaSun /> : <FaMoon />}
+        </Button>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: space-between;
     h3 {
-      color: var(--darkBlue);
+      color: var(--text-color);
       font-family: var(--dmSans);
       font-weight: 800;
     }
@@ -20,13 +20,13 @@
       gap: 5px;
       padding-right: 5px;
       p {
-        color: var(--darkBlue);
+        color: var(--text-color);
         font-family: var(--montSerrat);
         font-size: 14px;
         font-weight: 500;
       }
       svg {
-        color: var(--darkBlue);
+        color: var(--text-color);
         cursor: pointer;
       }
     }

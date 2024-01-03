@@ -70,9 +70,13 @@ const EventsCarousel = (props: { events: Event[] }) => {
 
       <Slider
         {...settings}
+<<<<<<< HEAD
         beforeChange={(_lastIndex, index) =>
           disablePrevOnInit(index, index !== 0)
         }
+=======
+        beforeChange={index => disablePrevOnInit(index, index !== 0)}
+>>>>>>> feature/3-dark-mode
       >
         {props.events.map((event, index) => {
           return (

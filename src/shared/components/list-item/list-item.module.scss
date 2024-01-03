@@ -5,7 +5,7 @@
   align-items: center;
   border-bottom: 1px solid var(--lightGrey);
   p {
-    color: var(--darkBlue);
+    color: var(--text-color);
     font-family: var(--montSerrat);
     font-weight: 500;
   }
@@ -17,7 +17,7 @@
     height: 100%;
     svg {
       font-size: 25px;
-      color: var(--darkBlue);
+      color: var(--text-color);
     }
   }
 
@@ -28,7 +28,7 @@
     justify-content: space-between;
     height: 100%;
     svg {
-      color: var(--darkBlue);
+      color: var(--text-color);
       cursor: pointer;
     }
   }

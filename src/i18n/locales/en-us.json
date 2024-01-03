@@ -1,6 +1,7 @@
 {
   "appointment_book": "Appointment book",
   "cardiology": "Cardiology",
+  "dark": "Dark",
   "dentist": "Dentist",
   "documents": "Documents",
   "emergency": "Emergency",
@@ -8,6 +9,7 @@
   "history": "History",
   "hi": "Hi",
   "household": "Household",
+  "light": "Light",
   "medical_exam": "Medical exam",
   "medical_cons": "Medical consultation",
   "messages": "Messages",

@@ -22,3 +22,40 @@
   --solidBlack: #000000;
   --lightGrey: rgb(225, 225, 225);
 }
+
+html[data-theme='light'] {
+  --arrow-left: #003459;
+  --arrow-right: #003459;
+  --background: #ffffff;
+  --button-background: #003459;
+  --button-text-color: #ffffff;
+  --text-color: #003459;
+  --highlight-text-color: #00a8e8;
+  --hi-message: #00a8e8;
+  --chat-message-background: #00a8e8;
+  --chat-message-text-color: #00a8e8;
+  --chat-input-text-color: #000000;
+  --chat-my-message-background: rgb(225, 225, 225);
+  --chat-my-message-text-color: rgb(225, 225, 225);
+  --profile-card-background: transparent;
+  --profile-card-text: #003459;
+  --personal-card-background: rgb(225, 225, 225);
+  --personal-card-text: #003459;
+}
+html[data-theme='dark'] {
+  --arrow-left: #ffffff;
+  --arrow-right: #ffffff;
+  --background: #003459;
+  --button-background: #ffffff;
+  --button-text-color: #003459;
+  --text-color: #ffffff;
+  --highlight-text-color: #00a8e8;
+  --hi-message: #00a8e8;
+  --chat-message-background: #00a8e8;
+  --chat-my-message-background: rgb(225, 225, 225);
+  --chat-input-text-color: #000000;
+  --profile-card-background: #ffffff;
+  --profile-card-text: #003459;
+  --personal-card-background: #00a8e8;
+  --personal-card-text: #ffffff;
+}

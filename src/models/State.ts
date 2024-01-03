@@ -7,6 +7,7 @@ export interface GlobalState {
 
 export interface UserState {
   lang: string;
+  theme: string;
 }
 
 export interface ChatState {

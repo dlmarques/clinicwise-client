@@ -1,6 +1,7 @@
 {
   "appointment_book": "A Minha Agenda",
   "cardiology": "Cardiologia",
+  "dark": "Escuro",
   "dentist": "Dentista",
   "documents": "Documentos",
   "emergency": "Urgência",
@@ -8,6 +9,7 @@
   "history": "Histórico",
   "hi": "Olá",
   "household": "Agregado familiar",
+  "light": "Claro",
   "medical_exam": "Exame médico",
   "medical_cons": "Consulta médica",
   "messages": "Mensagens",
