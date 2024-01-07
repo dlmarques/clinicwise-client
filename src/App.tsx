@@ -4,10 +4,24 @@ import WebDefault from './layout/screens/web-default/WebDefault';
 import { useDispatch } from 'react-redux';
 import { userActions } from './store/user/user';
 import Loading from './layout/screens/loading/Loading';
+import { login } from './services/auth-service';
+import { useAuth0 } from '@auth0/auth0-react';
 
 function App() {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
+  const { user } = useAuth0();
+  debugger;
+  /*   const loginUser = () => {
+    const { data, error } = login();
+
+    if (data !== null) {
+      debugger;
+    } else if (error !== null) {
+    } else {
+    }
+  }; */
+
   useEffect(() => {
     setTimeout(() => {
       const theme = localStorage.getItem('theme');
@@ -27,6 +41,8 @@ function App() {
       setLoading(false);
     }, 3000);
   }, []);
+
+  useEffect(() => console.log(user), []);
 
   return (
     <>

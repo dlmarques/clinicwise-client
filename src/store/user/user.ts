@@ -3,6 +3,11 @@ import { RootState } from '..';
 import { UserState } from '../../models/State';
 
 const initialState: UserState = {
+  firstName: '',
+  lastName: '',
+  name: '',
+  email: '',
+  role: '',
   lang: 'pt',
   theme: window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light',
 } as UserState;
@@ -11,6 +16,17 @@ export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
+    loginUser(state, action) {
+      const { firstName, lastName, email, role } = action.payload;
+      state = {
+        ...state,
+        firstName,
+        lastName,
+        email,
+        role,
+        name: `${firstName} ${lastName}`,
+      };
+    },
     changeLang: (state, action: PayloadAction<string>) => {
       state.lang = action.payload;
     },

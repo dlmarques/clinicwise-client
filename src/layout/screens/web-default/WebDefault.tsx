@@ -6,7 +6,6 @@ const WebDefault = () => {
   return (
     <div className={styles['web-default']}>
       <Sidebar />
-
       <Main />
     </div>
   );
