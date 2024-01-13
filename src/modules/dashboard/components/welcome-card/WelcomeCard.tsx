@@ -11,6 +11,7 @@ const WelcomeCard = () => {
   const { t } = useTranslation();
   const [nextEvents, setNextEvents] = useState<Event[]>([]);
   const userInfo: UserState = useSelector(getUserInfo);
+
   useEffect(() => {
     const arr = [
       {
@@ -58,6 +59,10 @@ const WelcomeCard = () => {
     ];
     setNextEvents(arr);
   }, []);
+
+  useEffect(() => {
+    console.log('user info changed', userInfo);
+  }, [userInfo]);
 
   return (
     <div className={styles['welcome-card']}>
