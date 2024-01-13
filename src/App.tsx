@@ -6,6 +6,7 @@ import { userActions } from './store/user/user';
 import Loading from './layout/screens/loading/Loading';
 import { login } from './services/auth-service';
 import { useAuth0 } from '@auth0/auth0-react';
+import axios from 'axios';
 
 function App() {
   const dispatch = useDispatch();
