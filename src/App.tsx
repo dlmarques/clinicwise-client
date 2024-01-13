@@ -11,17 +11,7 @@ import axios from 'axios';
 function App() {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
-  const { user } = useAuth0();
-  debugger;
-  /*   const loginUser = () => {
-    const { data, error } = login();
-
-    if (data !== null) {
-      debugger;
-    } else if (error !== null) {
-    } else {
-    }
-  }; */
+  const [token, setToken] = useState('');
 
   useEffect(() => {
     setTimeout(() => {
@@ -42,8 +32,6 @@ function App() {
       setLoading(false);
     }, 3000);
   }, []);
-
-  useEffect(() => console.log(user), []);
 
   return (
     <>

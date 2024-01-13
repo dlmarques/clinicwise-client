@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import AppRoutes from './routes/AppRoutes.tsx';
 import { ChakraProvider } from '@chakra-ui/react';
-import { Auth0Provider } from '@auth0/auth0-react';
+import { Auth0Provider, Auth0ProviderOptions } from '@auth0/auth0-react';
 import 'react-tooltip/dist/react-tooltip.css';
 import { Tooltip } from 'react-tooltip';
 import { Provider } from 'react-redux';
@@ -20,12 +20,16 @@ const onRedirectCallback = (appState: any) => {
 
 const config = getAuthConfig();
 
-const providerConfig = {
+const providerConfig: Auth0ProviderOptions = {
   domain: config.domain,
   clientId: config.clientId,
   onRedirectCallback,
   authorizationParams: {
     redirect_uri: window.location.origin + '/dashboard',
+    audience: config.audience,
+    useRefreshTokens: true,
+    scope:
+      'openid profile email read:current_user update:current_user_metadata',
   },
 };
 
