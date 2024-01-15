@@ -8,6 +8,7 @@ export interface GlobalState {
 export interface UserState {
   name: string;
   email: string;
+  role: string;
   lang: string;
   theme: string;
 }

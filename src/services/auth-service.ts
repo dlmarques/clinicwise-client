@@ -3,7 +3,7 @@ import { Endpoints } from './endpoints';
 
 export function login(info: { name: string; email: string }, token: string) {
   return axios.post(
-    `http://localhost:3000${Endpoints.LOGIN}`,
+    `${import.meta.env.VITE_BACKEND_URL}${Endpoints.LOGIN}`,
     {
       name: info.name,
       email: info.email,

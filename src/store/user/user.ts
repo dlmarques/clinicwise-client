@@ -5,6 +5,7 @@ import { UserState } from '../../models/State';
 const initialState: UserState = {
   name: '',
   email: '',
+  role: '',
   lang: 'pt',
   theme: window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light',
 } as UserState;

@@ -7,6 +7,8 @@ import Loading from './layout/screens/loading/Loading';
 import { login } from './services/auth-service';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useNavigate } from 'react-router';
+import { jwtDecode } from 'jwt-decode';
+import { ROLES } from './utils/roles';
 
 function App() {
   const dispatch = useDispatch();
@@ -47,7 +49,18 @@ function App() {
           value
         )
           .then(response => {
-            dispatch(userActions.loginUser(response.data.data));
+            const info: { [key: string]: string } = jwtDecode(value);
+            dispatch(
+              userActions.loginUser({
+                name: response.data.data.name,
+                email: response.data.data.email,
+                role: ROLES[
+                  info[
+                    import.meta.env.VITE_AUTH0_NAMESPACE_ROLES
+                  ][0] as keyof typeof ROLES
+                ],
+              })
+            );
           })
           .catch(err => {
             navigate('/ops', { replace: true });
