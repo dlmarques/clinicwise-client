@@ -6,22 +6,17 @@ import { userActions } from './store/user/user';
 import Loading from './layout/screens/loading/Loading';
 import { login } from './services/auth-service';
 import { useAuth0 } from '@auth0/auth0-react';
+import { useNavigate } from 'react-router';
+import { jwtDecode } from 'jwt-decode';
+import { ROLES } from './utils/roles';
 
 function App() {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
-  const { user } = useAuth0();
-  debugger;
-  /*   const loginUser = () => {
-    const { data, error } = login();
+  const { getAccessTokenSilently, user, isAuthenticated } = useAuth0();
+  const navigate = useNavigate();
 
-    if (data !== null) {
-      debugger;
-    } else if (error !== null) {
-    } else {
-    }
-  }; */
-
+  //set theme
   useEffect(() => {
     setTimeout(() => {
       const theme = localStorage.getItem('theme');
@@ -42,7 +37,37 @@ function App() {
     }, 3000);
   }, []);
 
-  useEffect(() => console.log(user), []);
+  //login user
+  useEffect(() => {
+    getAccessTokenSilently().then((value: string) => {
+      if (user?.nickname && user.email) {
+        login(
+          {
+            name: user.nickname,
+            email: user.email,
+          },
+          value
+        )
+          .then(response => {
+            const info: { [key: string]: string } = jwtDecode(value);
+            dispatch(
+              userActions.loginUser({
+                name: response.data.data.name,
+                email: response.data.data.email,
+                role: ROLES[
+                  info[
+                    import.meta.env.VITE_AUTH0_NAMESPACE_ROLES
+                  ][0] as keyof typeof ROLES
+                ],
+              })
+            );
+          })
+          .catch(err => {
+            navigate('/ops', { replace: true });
+          });
+      }
+    });
+  }, [user, isAuthenticated]);
 
   return (
     <>

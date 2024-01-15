@@ -11,6 +11,7 @@ const WelcomeCard = () => {
   const { t } = useTranslation();
   const [nextEvents, setNextEvents] = useState<Event[]>([]);
   const userInfo: UserState = useSelector(getUserInfo);
+
   useEffect(() => {
     const arr = [
       {

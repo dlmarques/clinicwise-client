@@ -14,7 +14,6 @@ const Sidebar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const theme = useSelector(getUserTheme);
-  console.log(theme);
 
   return (
     <div className={styles.sidebar}>

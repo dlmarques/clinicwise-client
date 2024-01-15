@@ -3,8 +3,6 @@ import { RootState } from '..';
 import { UserState } from '../../models/State';
 
 const initialState: UserState = {
-  firstName: '',
-  lastName: '',
   name: '',
   email: '',
   role: '',
@@ -16,20 +14,20 @@ export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
+    //login user
     loginUser(state, action) {
-      const { firstName, lastName, email, role } = action.payload;
-      state = {
-        ...state,
-        firstName,
-        lastName,
-        email,
-        role,
-        name: `${firstName} ${lastName}`,
-      };
+      const { name, email } = action.payload;
+
+      state.email = email;
+      state.name = name;
     },
+
+    //change lang
     changeLang: (state, action: PayloadAction<string>) => {
       state.lang = action.payload;
     },
+
+    //change theme
     changeTheme(state) {
       if (state.theme === 'dark') {
         state.theme = 'light';

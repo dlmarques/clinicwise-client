@@ -1,29 +1,17 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import { Endpoints } from './endpoints';
 
-export function login(info: {
-  firstName: string;
-  lastName: string;
-  email: string;
-  role: string;
-}) {
-  const response: { data: AxiosResponse | null; error: any } = {
-    data: null,
-    error: null,
-  };
-  axios
-    .post(`http://localhost:3000${Endpoints.LOGIN}`, {
-      firstName: info.firstName,
-      lastName: info.lastName,
+export function login(info: { name: string; email: string }, token: string) {
+  return axios.post(
+    `${import.meta.env.VITE_BACKEND_URL}${Endpoints.LOGIN}`,
+    {
+      name: info.name,
       email: info.email,
-      role: info.role,
-    })
-    .then(res => {
-      response.data = res;
-    })
-    .catch(error => {
-      response.error = error;
-    });
-
-  return response;
+    },
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
 }
