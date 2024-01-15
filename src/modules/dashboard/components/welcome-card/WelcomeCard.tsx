@@ -60,10 +60,6 @@ const WelcomeCard = () => {
     setNextEvents(arr);
   }, []);
 
-  useEffect(() => {
-    console.log('user info changed', userInfo);
-  }, [userInfo]);
-
   return (
     <div className={styles['welcome-card']}>
       <h1>
