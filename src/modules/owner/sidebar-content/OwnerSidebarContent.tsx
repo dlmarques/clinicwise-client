@@ -14,7 +14,7 @@ const OwnerSidebarContent = () => {
           <span onClick={() => navigate('database')}>{t('database')}</span>
         </li>
         <li>
-          <span onClick={() => navigate('data')}>{t('data')}</span>
+          <span onClick={() => navigate('analytics')}>{t('analytics')}</span>
         </li>
         <li>
           <span onClick={() => navigate('profile')}>{t('my_profile')}</span>
