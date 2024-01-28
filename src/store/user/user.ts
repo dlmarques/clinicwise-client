@@ -16,10 +16,11 @@ export const userSlice = createSlice({
   reducers: {
     //login user
     loginUser(state, action) {
-      const { name, email } = action.payload;
+      const { name, email, role } = action.payload;
 
       state.email = email;
       state.name = name;
+      state.role = role;
     },
 
     //change lang

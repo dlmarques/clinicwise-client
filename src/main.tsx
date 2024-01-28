@@ -25,7 +25,7 @@ const providerConfig: Auth0ProviderOptions = {
   clientId: config.clientId,
   onRedirectCallback,
   authorizationParams: {
-    redirect_uri: window.location.origin + '/dashboard',
+    redirect_uri: window.location.origin + '/app',
     audience: config.audience,
     useRefreshTokens: true,
     scope:
