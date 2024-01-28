@@ -12,10 +12,15 @@ import AdminSidebarContent from '../../../modules/admin/sidebar-content/AdminSid
 import DoctorSidebarContent from '../../../modules/doctor/sidebar-content/DoctorSidebarContent';
 import PatientSidebarContent from '../../../modules/patient/sidebar-content/PatientSidebarContent';
 import OwnerSidebarContent from '../../../modules/owner/sidebar-content/OwnerSidebarContent';
+import { LuLogOut } from 'react-icons/lu';
+import { useAuth0 } from '@auth0/auth0-react';
+import { useNavigate } from 'react-router';
 
 const Sidebar = () => {
   const { t } = useTranslation();
+  const { logout } = useAuth0();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const theme = useSelector(getUserTheme);
   const role = useSelector(getUserRole);
 
@@ -37,11 +42,11 @@ const Sidebar = () => {
 
   return (
     <div className={styles.sidebar}>
-      <div className={styles.logo}>
+      <div className={styles.logo} onClick={() => navigate('/app/dashboard')}>
         {theme === 'dark' ? <DarkLogo /> : <LightLogo />}
       </div>
       <div className={styles.menu}>{renderSidebarContentByRole()}</div>
-      <div className={styles.theme}>
+      <div className={styles.buttons}>
         <Button
           className={styles.button}
           onClick={() => dispatch(userActions.changeTheme())}
@@ -49,6 +54,14 @@ const Sidebar = () => {
           data-tooltip-content={theme === 'dark' ? t('light') : t('dark')}
         >
           {theme === 'dark' ? <FaSun /> : <FaMoon />}
+        </Button>
+        <Button
+          className={styles.button}
+          onClick={() => logout()}
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content={t('logout')}
+        >
+          <LuLogOut />
         </Button>
       </div>
     </div>

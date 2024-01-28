@@ -13,8 +13,9 @@ const AppRoutes = () => {
       <Routes>
         <Route path="" element={<Login />} />
         <Route path="/ops" element={<ErrorPage />} />
-        <Route path="/dashboard/*" element={<App />} />
-        <Route path="*" element={<Navigate to="/dashboard" />} />
+        <Route path="/app/*" element={<App />} />
+        <Route path="/app" element={<Navigate to="/app/dashboard" />} />
+        <Route path="*" element={<div>notfound</div>} />
       </Routes>
     </Router>
   );
